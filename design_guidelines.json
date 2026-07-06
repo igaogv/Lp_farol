@@ -1,0 +1,116 @@
+{
+  "project_context": {
+    "domain": "Automotive Detailing / Education",
+    "theme": "Dark",
+    "archetype": "Performance Pro / Luxury Automotive",
+    "tone": "Direct, professional, premium, honest",
+    "target_audience": "Car enthusiasts, detailers looking for an extra skill, mechanics, DIYers"
+  },
+  "typography": {
+    "strategy": "Aggressive, technical, high-performance. Avoid Inter/Roboto. Use uppercase for major headings.",
+    "headings": {
+      "family": "Bebas Neue",
+      "weights": ["400"],
+      "classes": "font-heading uppercase tracking-wide",
+      "import_url": "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    },
+    "body": {
+      "family": "Manrope",
+      "weights": ["400", "500", "700", "800"],
+      "classes": "font-sans",
+      "import_url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+    }
+  },
+  "color_palette": {
+    "background": {
+      "deep_black": "#08090C",
+      "graphite": "#171A20"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#E5E7EB",
+      "muted": "#9CA3AF"
+    },
+    "brand_accent": {
+      "racing_red": "#D71920",
+      "dark_red": "#9E1118",
+      "headlight_yellow": "#F4B000"
+    },
+    "css_variables": {
+      "--bg-black": "8, 9, 12",
+      "--bg-graphite": "23, 26, 32",
+      "--text-white": "255, 255, 255",
+      "--text-gray": "229, 231, 235",
+      "--accent-red": "215, 25, 32",
+      "--accent-dark-red": "158, 17, 24",
+      "--accent-yellow": "244, 176, 0"
+    }
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_padding": "py-20 md:py-32",
+    "grid_system": "Bento Grid (Control Room style for data, Tetris style for features)",
+    "mobile_first": true,
+    "border_radius": "rounded-none md:rounded-lg"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#D71920] hover:bg-[#9E1118] text-white font-heading text-2xl uppercase tracking-wider px-8 py-4 shadow-[0_0_20px_rgba(215,25,32,0.4)] hover:shadow-[0_0_30px_rgba(215,25,32,0.6)] transition-all duration-300",
+      "sticky_mobile": "fixed bottom-4 left-4 right-4 z-50 bg-[#D71920] text-white text-center font-heading text-xl py-3 rounded shadow-2xl border border-white/10 flex justify-center items-center gap-2",
+      "whatsapp_float": "fixed bottom-20 md:bottom-6 right-4 md:right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-xl hover:scale-110 transition-transform"
+    },
+    "cards": {
+      "offer_card": "bg-[#171A20] border-2 border-[#D71920] rounded-xl p-8 shadow-[0_0_40px_rgba(215,25,32,0.15)] relative overflow-hidden",
+      "module_card": "bg-gradient-to-br from-[#171A20] to-[#08090C] border border-white/5 hover:border-[#D71920]/50 p-6 rounded-lg transition-colors group",
+      "problem_card": "bg-[#171A20]/80 backdrop-blur-sm border-l-4 border-[#9E1118] p-6"
+    },
+    "badges": {
+      "guarantee": "inline-flex items-center gap-2 bg-[#F4B000]/10 text-[#F4B000] px-4 py-1.5 rounded-full text-sm font-bold border border-[#F4B000]/20",
+      "discount": "bg-[#D71920] text-white px-3 py-1 rounded font-bold text-sm tracking-wide"
+    }
+  },
+  "micro_animations": {
+    "hero_image": "Subtle pulse or breathing effect on the glowing headlight image.",
+    "hover_states": "Buttons scale up slightly (scale-105). Cards lift up (-translate-y-1) with glow effect.",
+    "scroll_reveal": "Fade up and in (translate-y-4 to 0, opacity 0 to 1) using framer-motion as user scrolls.",
+    "sticky_cta": "Slide up from bottom after 30% scroll depth (opacity 0 -> 1, y: 50 -> 0)."
+  },
+  "media_urls": [
+    {
+      "category": "hero_background",
+      "url": "https://images.unsplash.com/photo-1578245600656-e8fe67a2b5f7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHw0fHxjYXIlMjBoZWFkbGlnaHQlMjBnbG93aW5nJTIwbmlnaHR8ZW58MHx8fHwxNzgzMzQyODM5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Hero headlight glowing in the dark"
+    },
+    {
+      "category": "sports_car_closeup",
+      "url": "https://images.unsplash.com/photo-1730742298439-6d82f9edc3c2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxzcG9ydHMlMjBjYXIlMjBoZWFkbGlnaHR8ZW58MHx8fHwxNzgzMzQyODM5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Sports car headlight detail for aesthetic"
+    },
+    {
+      "category": "workshop_detailing",
+      "url": "https://images.unsplash.com/photo-1620584899131-a5ff5f8fbb03?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxhdXRvJTIwZGV0YWlsaW5nJTIwcG9saXNoaW5nfGVufDB8fHx8MTc4MzM0MjgzOXww&ixlib=rb-4.1.0&q=85",
+      "description": "Polishing detailing action shot"
+    },
+    {
+      "category": "tools_materials",
+      "url": "https://images.unsplash.com/photo-1599256630445-67b5772b1204?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxtZWNoYW5pYyUyMHdvcmtzaG9wfGVufDB8fHx8MTc4MzM0MjgzOXww&ixlib=rb-4.1.0&q=85",
+      "description": "Metal tools/workshop flatlay"
+    }
+  ],
+  "content_requirements": {
+    "language": "pt-BR",
+    "tone": "Direct, premium, authoritative",
+    "whatsapp_link": "https://wa.me/5519999544387?text=Ol%C3%A1%2C%20quero%20garantir%20minha%20vaga%20no%20Curso%20de%20Restaura%C3%A7%C3%A3o%20de%20Far%C3%B3is%20por%20R%24%2069%2C90%21",
+    "price": "R$ 69,90"
+  },
+  "instructions_to_main_agent": [
+    "You are building a high-converting Portuguese Brazilian Landing Page.",
+    "Install tailwindcss, lucide-react, framer-motion if needed. You are working with .js, NOT .tsx.",
+    "Do NOT use Inter or Roboto. Add Google Fonts 'Bebas Neue' and 'Manrope' to index.html or global css. Update tailwind.config.js to set `fontFamily: { heading: ['Bebas Neue', 'sans-serif'], sans: ['Manrope', 'sans-serif'] }`.",
+    "Create the specific blocks: HERO, PROBLEM, OPPORTUNITY, WHAT YOU'LL LEARN, MODULES, BONUSES, OFFER CARD, POTENTIAL, FOR WHOM / NOT FOR WHOM, GUARANTEE, FAQ, FINAL CTA.",
+    "Offer Card must vividly display the R$ 69,90 price point with a strong red border on a graphite background.",
+    "All interactive and key informational elements MUST include `data-testid` (e.g., `data-testid=\"hero-cta\"`).",
+    "Implement the sticky CTA for mobile. Hide it initially and reveal after 30% scroll using Framer Motion.",
+    "Ensure total dark mode aesthetic with deep blacks (#08090C), graphite (#171A20), and aggressive red (#D71920) accents. NO purple/violet gradients."
+  ]
+}
