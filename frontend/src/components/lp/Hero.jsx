@@ -15,18 +15,32 @@ const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.12 } },
 };
+
 const item = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
 };
 
 export const Hero = () => (
-  <section id="hero" data-testid={LP.hero} className="relative min-h-screen flex items-center overflow-hidden">
+  <section
+    id="hero"
+    data-testid={LP.hero}
+    className="relative min-h-screen flex items-center overflow-hidden"
+  >
     <div className="absolute inset-0">
-      <img src={IMAGES.heroGlow} alt="Farol de carro brilhando no escuro" className="w-full h-full object-cover object-center" />
+      <img
+        src={IMAGES.heroGlow}
+        alt="Farol de carro brilhando no escuro"
+        className="w-full h-full object-cover object-center"
+      />
       <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/90 to-brand-black/40" />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-transparent to-brand-black/60" />
     </div>
+
     <div className="absolute inset-0 subtle-grid opacity-40" />
 
     <motion.div
@@ -56,29 +70,44 @@ export const Hero = () => (
           data-testid={LP.heroSubheadline}
           className="text-brand-gray text-base md:text-lg mt-6 max-w-xl leading-relaxed"
         >
-          Domine a técnica de restauração de faróis do zero — lixamento, polimento e
-          proteção — e ofereça um serviço com resultado visível na hora, mesmo sem
-          experiência em estética automotiva.
+          Domine a técnica de restauração de faróis do zero — lixamento,
+          polimento e proteção — e ofereça um serviço com resultado visível na
+          hora, mesmo sem experiência em estética automotiva.
         </motion.p>
 
-        <motion.div variants={item} className="mt-8 flex flex-col sm:flex-row sm:items-center gap-5">
+        <motion.div
+          variants={item}
+          className="mt-8 flex flex-col sm:flex-row sm:items-center gap-5"
+        >
           <a
             href={WHATSAPP_CHECKOUT}
             target="_blank"
             rel="noopener noreferrer"
             data-testid={LP.heroCta}
             className="btn-cta animate-pulse-glow"
+            onClick={() => {
+              if (window.fbq) {
+                window.fbq("track", "Lead");
+              }
+            }}
           >
             <WhatsAppIcon className="w-5 h-5" />
             Quero começar agora
             <ArrowRight className="w-5 h-5" />
           </a>
+
           <div data-testid={LP.heroPrice} className="flex flex-col">
-            <span className="text-brand-gray-mute text-sm line-through">de {BRAND.priceFrom}</span>
+            <span className="text-brand-gray-mute text-sm line-through">
+              de {BRAND.priceFrom}
+            </span>
+
             <span className="font-heading text-3xl text-brand-yellow tracking-wide leading-none">
               por {BRAND.price}
             </span>
-            <span className="text-brand-gray-mute text-xs">pagamento único</span>
+
+            <span className="text-brand-gray-mute text-xs">
+              pagamento único
+            </span>
           </div>
         </motion.div>
 
