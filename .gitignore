@@ -18,6 +18,14 @@ node_modules/
 
 # Testing
 /coverage
+/coverage.*
+test_reports/
+.pytest_cache/
+htmlcov/
+.pytype/
+.mypy_cache/
+.ruff_cache/
+pytestdebug.log
 
 # Next.js
 /.next/
@@ -31,7 +39,9 @@ dist/
 dist
 
 # Environment files (comprehensive coverage)
-
+.env
+.env.*
+!.env.example
 *token.json*
 *credentials.json*
 
@@ -73,8 +83,12 @@ agenthub/agents/youtube/db
 *.deb
 *.dylib
 
-# Build caches
+# Build caches and temp files
 .cache/
+*.tmp
+*.temp
+tmp/
+temp/
 
 memory/test_credentials.md
 
